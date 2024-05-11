@@ -5,26 +5,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/loginStyle.css">
+        <link rel="stylesheet" href="/../css/header.css">
+        <link rel="stylesheet" href="/../css/loginStyle.css">
     </head>
     <body>
         <header class="header">
             <div class="header-1">
                 <div class="title">
-                <img class="logoIcon" src="icons/book-opened-svgrepo-com.svg">
+                <img class="logoIcon" src="/../icons/book-opened-svgrepo-com.svg">
                 <a href="#" class="logo">E-Book</a>
                 </div>
                 <form action="register" class="search-form">
                     <input type="search" name="" placeholder="search here..." id="search-box">
-                    <label for="search-box"><img class="search" src="icons/search.svg"></label>
+                    <label for="search-box"><img class="search" src="/../icons/search.svg"></label>
                 </form>
 
                 <div class="icons">
-                    <div id="search-btn"><img class="icon" src="icons/search.svg"></div>
-                    <a href="#"><img class="icon" src="icons/heart-svgrepo-com.svg"></a>
-                    <a href="#"><img class="icon" src="icons/shopping-cart-svgrepo-com.svg"></a>
-                    <a href="#"><img class="icon" src="icons/profile-round-1342-svgrepo-com.svg"></a>
+                    <div id="search-btn"><img class="icon" src="/../icons/search.svg"></div>
+                    <a href="#"><img class="icon" src="/../icons/heart-svgrepo-com.svg"></a>
+                    <a href="#"><img class="icon" src="/../icons/shopping-cart-svgrepo-com.svg"></a>
+                    <a href="#"><img class="icon" src="/../icons/profile-round-1342-svgrepo-com.svg"></a>
                 </div>
             </div>
             
@@ -55,13 +55,13 @@
                     
                     <div class="social-container">
                         <a href="#" class="social">
-                            <img class="social-icon" src="icons/facebook-svgrepo-com.svg">
+                            <img class="social-icon" src="/../icons/facebook-svgrepo-com.svg">
                         </a>
                         <a href="#" class="social">
-                            <img class="social-icon" src="icons/instagram-svgrepo-com.svg">
+                            <img class="social-icon" src="/../icons/instagram-svgrepo-com.svg">
                             </a>
                         <a href="#" class="social">
-                            <img class="social-icon" src="icons/linkedin-161-svgrepo-com.svg">
+                            <img class="social-icon" src="/../icons/linkedin-161-svgrepo-com.svg">
                         </a>
                     </div>
                     <span>or use your email for registration</span>
@@ -80,13 +80,13 @@
 				    </c:if>
                     <div class="social-container">
                         <a href="#" class="social">
-                            <img class="social-icon" src="icons/facebook-svgrepo-com.svg">
+                            <img class="social-icon" src="/../icons/facebook-svgrepo-com.svg">
                         </a>
                         <a href="#" class="social">
-                            <img class="social-icon" src="icons/instagram-svgrepo-com.svg">
+                            <img class="social-icon" src="/../icons/instagram-svgrepo-com.svg">
                             </a>
                         <a href="#" class="social">
-                            <img class="social-icon" src="icons/linkedin-161-svgrepo-com.svg">
+                            <img class="social-icon" src="/../icons/linkedin-161-svgrepo-com.svg">
                         </a>
                     </div>
                     <span>or use your account</span>
@@ -113,16 +113,16 @@
         </div>
         
         <nav class="bottom-navbar">
-            <a href="#home"><img class="iconHome" src="icons/home-svgrepo-com.svg"></a>
-            <a href="#featured"><img class="icon" src="icons/list-ul-alt-svgrepo-com.svg"></a>
-            <a href="#arrivals"><img class="icon" src="icons/tags-svgrepo-com.svg"></a>
-            <a href="#reviews"><img class="icon" src="icons/comments-svgrepo-com.svg"></a>
-            <a href="#contact"><img class="icon" src="icons/message-communication-contact-svgrepo-com.svg"></a>
-            <a href="#archive"><img class="icon" src="icons/archive-svgrepo-com.svg"></a>
+            <a href="#home"><img class="iconHome" src="/../icons/home-svgrepo-com.svg"></a>
+            <a href="#featured"><img class="icon" src="/../icons/list-ul-alt-svgrepo-com.svg"></a>
+            <a href="#arrivals"><img class="icon" src="/../icons/tags-svgrepo-com.svg"></a>
+            <a href="#reviews"><img class="icon" src="/../icons/comments-svgrepo-com.svg"></a>
+            <a href="#contact"><img class="icon" src="/../icons/message-communication-contact-svgrepo-com.svg"></a>
+            <a href="#archive"><img class="icon" src="/../icons/archive-svgrepo-com.svg"></a>
         </nav>
 	</body>
-	<script src="js/header.js"></script>
-    <script src="js/LoginJS.js"></script>
+	<script src="/../js/header.js"></script>
+    <script src="/../js/LoginJS.js"></script>
     
 </html>
 

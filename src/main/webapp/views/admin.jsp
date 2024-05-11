@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 		<!-- custom css file link  -->
-		<link rel="stylesheet" href="css/profile.css">
+		<link rel="stylesheet" href="/../css/profile.css">
 	</head>
 	<body>
 		<header class="header">
@@ -33,7 +33,7 @@
 	  </div>
    
 	  <div class="profile">
-		 <img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png" class="image" alt="">
+		 <img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png" class="image" alt="">
 		 <h3 class="name">User01</h3>
 		 <p class="role">status: ADMIN</p>
 		 <a href="profile.html" class="btn">view profile</a>
@@ -49,5 +49,5 @@
 
   
 	</body>
-	<script src="js/profile.js"></script>
+	<script src="/../js/profile.js"></script>
 </html>

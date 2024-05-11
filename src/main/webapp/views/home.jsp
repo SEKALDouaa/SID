@@ -2,10 +2,10 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/archive.css">
+	<link rel="stylesheet" href="/../css/style.css">
+	<link rel="stylesheet" href="/../css/header.css">
+	<link rel="stylesheet" href="/../css/home.css">
+	<link rel="stylesheet" href="/../css/archive.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 	/>
 </head>
@@ -13,19 +13,19 @@
 	<header class="header">
 		<div class="header-1">
 			<div class="title">
-			<img class="logoIcon" src="icons/book-opened-svgrepo-com.svg">
+			<img class="logoIcon" src="/../icons/book-opened-svgrepo-com.svg">
 			<a href="#" class="logo">E-Doc</a>
 			</div>
 			<form action="register" class="search-form">
 				<input type="search" name="" placeholder="search here..." id="search-box">
-				<label for="search-box"><img class="search" src="icons/search.svg"></label>
+				<label for="search-box"><img class="search" src="/../icons/search.svg"></label>
 			</form>
 
 			<div class="icons">
-				<div id="search-btn"><img class="icon" src="icons/search.svg"></div>
-				<a href="#"><img class="icon" src="icons/heart-svgrepo-com.svg"></a>
-				<a href="#"><img class="icon" src="icons/shopping-cart-svgrepo-com.svg"></a>
-				<a href="#"><img class="icon" src="icons/profile-round-1342-svgrepo-com.svg"></a>
+				<div id="search-btn"><img class="icon" src="/../icons/search.svg"></div>
+				<a href="#"><img class="icon" src="/../icons/heart-svgrepo-com.svg"></a>
+				<a href="#"><img class="icon" src="/../icons/shopping-cart-svgrepo-com.svg"></a>
+				<a href="#"><img class="icon" src="/../icons/profile-round-1342-svgrepo-com.svg"></a>
 			</div>
 		</div>
 		
@@ -52,14 +52,14 @@
 				</div>
 				<div class="swiper books-slider">
 					<div class="swiper-wrapper">
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Ressouces Humaines</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
-						<a href="#" class="swiper-slide"><img src="icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Ressouces Humaines</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
+						<a href="#" class="swiper-slide"><img src="/../icons/document-svgrepo-com.svg" alt="" >Comptabilité</a>
 
 					</div>
 
@@ -77,7 +77,7 @@
 			<div class="swiper-wraper">
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book1</h3>
@@ -88,7 +88,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book2</h3>
@@ -99,7 +99,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book3</h3>
@@ -110,7 +110,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book4</h3>
@@ -128,7 +128,7 @@
 			<div class="swiper-wraper">
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book5</h3>
@@ -139,7 +139,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book6</h3>
@@ -150,7 +150,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book7</h3>
@@ -161,7 +161,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book8</h3>
@@ -179,7 +179,7 @@
 			<div class="swiper-wraper">
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book5</h3>
@@ -190,7 +190,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book6</h3>
@@ -201,7 +201,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book7</h3>
@@ -212,7 +212,7 @@
 
 				<a href="#" class="box">
 					<div class="image">
-						<img src="imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
+						<img src="/../imgs/15_Last-Minute_Valentine_s_Day_Gifts_That_ll_Save_You_From_a_Drugstore_Stuffed_Animal-removebg-preview.png">
 					</div>
 					<div class="content">
 						<h3>Book8</h3>
@@ -227,12 +227,12 @@
 	</section>
 	<!--srrivals end here-->
 	<nav class="bottom-navbar">
-		<a href="#home"><img class="iconHome" src="icons/home-svgrepo-com.svg"></a>
-		<a href="#featured"><img class="icon" src="icons/list-ul-alt-svgrepo-com.svg"></a>
-		<a href="#arrivals"><img class="icon" src="icons/tags-svgrepo-com.svg"></a>
-		<a href="#reviews"><img class="icon" src="icons/comments-svgrepo-com.svg"></a>
-		<a href="#contact"><img class="icon" src="icons/message-communication-contact-svgrepo-com.svg"></a>
-		<a href="#archive"><img class="icon" src="icons/archive-svgrepo-com.svg"></a>
+		<a href="#home"><img class="iconHome" src="/../icons/home-svgrepo-com.svg"></a>
+		<a href="#featured"><img class="icon" src="/../icons/list-ul-alt-svgrepo-com.svg"></a>
+		<a href="#arrivals"><img class="icon" src="/../icons/tags-svgrepo-com.svg"></a>
+		<a href="#reviews"><img class="icon" src="/../icons/comments-svgrepo-com.svg"></a>
+		<a href="#contact"><img class="icon" src="/../icons/message-communication-contact-svgrepo-com.svg"></a>
+		<a href="#archive"><img class="icon" src="/../icons/archive-svgrepo-com.svg"></a>
 	</nav>
 
 	
@@ -283,8 +283,8 @@
 	</div>
 	<!--Footer ends here-->
 	</body>
-	<script src="js/header.js"></script>
-	<script src="js/home.js"></script>
+	<script src="/../js/header.js"></script>
+	<script src="/../js/home.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		var swiper = new Swiper(".books-slider", {
@@ -307,5 +307,5 @@
     },
   });
 	</script>
-	<script src="js/archive.js"></script>
+	<script src="/../js/archive.js"></script>
 </html>

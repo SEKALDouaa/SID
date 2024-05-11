@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root{
+    --red:#2e8eee;
+    --dark-color:#30229e4e;
+    --black:#444;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+
+*{
+    font-family:'Poppins',sans-serif;
+    margin:0; padding:0;
+    box-sizing:border-box;
+    outline:none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:var(--black);
+}
+.header-1{
+    background: #fff;
+    padding:1rem 9%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.icon{
+    height: 23px;
+    width: 23px;
+    display: inline;
+    margin-right: 10px;
+}
+.icons{
+    display:flex;
+    flex-direction: row;
+}
+.search{
+    height: 20px;
+    width: 20px;
+    margin: 30px 20px 20px 30px;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+    width: 100px;
+}
+.logoIcon{
+    height: 30px;
+    width: 30px;
+    padding-right: 7px;
+}
+.search-form{
+    width: 50rem;
+    height: 5rem;
+    border:var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: .5rem;
+    padding: 0;
+}
+.header .header-1 .search-form input{
+    font-size:1.6rem;
+    padding:0 1.2rem;
+    height:100%;
+    width:100%;
+    text-transform: none;
+    color:var(--black);
+    background-color: #fff;
+}
+.header .header-1 .search-form .search:hover{
+    cursor: pointer;
+}
+.header .header-1 .icons a{
+    margin-left:1.5rem;
+}
+#search-btn{
+    display: none;
+}
+#search-btn:hover{
+    cursor: pointer;
+}
+.header-2{
+    background: var(--red);
+}
+.header .header-2 .navbar{
+    text-align: center;
+}
+.header .header-2 .navbar a{
+    color: #fff;
+    display: inline-block;
+    padding:2.2rem;
+    font-size:1.7rem;
+    margin: 0;
+}
+.header .header-2 .navbar a:hover{
+    background: var(--dark-color);
+}
+
+.header .header-2.active{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+}
+.header .header-1 .search-form.active{
+    top:115%;
+}
+.bottom-navbar{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: var(--red);
+    position: fixed;
+    bottom:0; left:0; right: 0;
+    z-index: 1000;
+    display: none;
+}
+.bottom-navbar a{
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    color:#fff;
+}
+.bottom-navbar .icon{
+    filter: brightness(0) invert(1);
+}
+.bottom-navbar .icon:hover,
+.bottom-navbar .iconHome:hover
+{
+    filter: brightness(1) invert(0);
+}
+.bottom-navbar a:hover{
+    background: var(--dark-color);
+    padding-top:4px;
+}
+.iconHome{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);
+    padding-top: 6px;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius:.5rem;
+    color:#fff;
+    background: var(--red);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--dark-color);
+}
+@media(max-width:768px){
+    html{
+        scroll-padding-top: 0;
+    }
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display: none;
+    }
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+    .header .header-1 .search-form{
+        position: absolute;
+        top:-115%; right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow); 
+    }
+    #search-btn{
+        margin-top:14px;
+        display: inline-block;
+    }
+    .bottom-navbar{
+        display: block;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size:50%;
+    }
+   
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header .header-1{
+        padding: 2rem;
+    }
+}

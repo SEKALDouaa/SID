@@ -1,0 +1,59 @@
+.box{
+    display:flex;
+    align-items: center;
+
+    gap:1.5rem;
+    padding:2rem 2rem;
+   
+    margin:1rem 0;
+}
+.box .image img{
+    height:15rem;
+}
+.box:hover{
+    border-color: black;
+}
+.box .content h3{
+    font-size:2rem;
+    color:black;
+}
+.box .content .price{
+    font-size:2rem;
+    color:rgb(0, 0, 0);
+    padding-bottom: .5rem;
+    display: none;
+}
+
+.box .content .stars .icon{
+    height:10px;
+    width:10px;
+}
+.swiper-wraper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    font-size:3rem;
+    background: linear-gradient(rgb(40, 42, 195),rgb(13, 116, 243));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: .2s;
+    text-align:center;
+    padding-top:2rem;
+    margin:0;
+    letter-spacing: .5rem;
+    font-weight:300; 
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .swiper-wraper{
+        display: block;
+    }
+}
+.arrivals{
+    width: 100%;
+}

@@ -1,30 +1,32 @@
 package utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.mongodb.client.MongoClient;
 
+import beans.User;
 import dao.MongodbConnection;
+import dao.UserDao;
+import dao.UserDaoImpl;
 
 public class MainTest {
-    private static final Logger logger = LoggerFactory.getLogger(MainTest.class);
 
 
 	public static void main(String[] args) {
-        logger.info("Starting MongoDB connection...");
-
-		  // Get the MongoDB client instance
+		/*
+		 //Tester la connection de la base
         MongoClient mongoClient = MongodbConnection.getMongoClient();
-
-        // Now you can use the `mongoClient` to interact with MongoDB
-        // For example, list the database names:
         for (String dbName : mongoClient.listDatabaseNames()) {
             System.out.println("Database: " + dbName);
         }
-
-        // Close the client when done (usually in a finally block)
-        mongoClient.close();
+        mongoClient.close();*/
+		
+		//Tester CRUD pour user
+		
+		UserDao ud= new UserDaoImpl(MongodbConnection.getMongoClient());
+		User user=new User("0","test@gmail.com","hbiihjko","test2","test2");
+		//ud.insertUser(user);
+		//User user2=ud.selectUserByEmail("test@gmail.com");
+		//System.out.println(user2.toString());
+		ud.updateUser(user);
     }
 
 }

@@ -1,6 +1,6 @@
 package beans;
 
-public class Document {
+public class Documentb {
 	private String code;
 	private String Auteur;
 	private String genre; //livre, article, cours...
@@ -8,10 +8,10 @@ public class Document {
 	private String dateModification;
 	private int version;
 	
-	public Document() {
+	public Documentb() {
 	}
 
-	public Document(String code, String auteur, String genre, String dateCreation, String dateModification,
+	public Documentb(String code, String auteur, String genre, String dateCreation, String dateModification,
 			int version) {
 		this.code = code;
 		Auteur = auteur;

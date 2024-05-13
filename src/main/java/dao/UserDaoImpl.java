@@ -23,6 +23,7 @@ public class UserDaoImpl implements UserDao {
 
     public void insertUser(User user) {
         Document userDocument = new Document()
+        		.append("id", user.getId())
                 .append("email", user.getEmail())
                 .append("password", user.getPassword())
                 .append("department", user.getDepartement())
@@ -37,7 +38,7 @@ public class UserDaoImpl implements UserDao {
 
         if (userDocument != null) {
             return new User(
-                    userDocument.getString("id"),
+                    userDocument.getInteger("id"),
                     userDocument.getString("email"),
                     userDocument.getString("password"),
                     userDocument.getString("department"),
@@ -68,7 +69,7 @@ public class UserDaoImpl implements UserDao {
 
         if (userDocument != null) {
             return new User(
-                    userDocument.getString("id"),
+                    userDocument.getInteger("id"),
                     userDocument.getString("email"),
                     userDocument.getString("password"),
                     userDocument.getString("department"),
@@ -85,7 +86,7 @@ public class UserDaoImpl implements UserDao {
 	        while (cursor.hasNext()) {
 	            Document userDocument = cursor.next();
 	            
-	            String id = userDocument.getString("id");
+	            int id = userDocument.getInteger("id");
 	            String email = userDocument.getString("email");
 	            String password = userDocument.getString("password");
 	            String department = userDocument.getString("department");

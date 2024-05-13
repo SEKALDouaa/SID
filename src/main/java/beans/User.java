@@ -1,7 +1,7 @@
 package beans;
 
 public class User {
-	private String id;
+	private int id;
 	private String email;
 	private String password;
 	private String departement;
@@ -10,7 +10,7 @@ public class User {
 	public User() {
 	}
 
-	public User(String id, String email, String password, String departement, String type) {
+	public User(int id, String email, String password, String departement, String type) {
 		this.id = id;
 		this.email = email;
 		this.password = password;
@@ -18,11 +18,11 @@ public class User {
 		this.type = type;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

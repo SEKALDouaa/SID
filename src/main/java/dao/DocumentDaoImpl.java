@@ -24,11 +24,13 @@ public class DocumentDaoImpl implements DocumentDao{
 
 	public void insertDocument(Documentb document) {
 		Document DocumentDocument = new Document()
+				.append("code",document.getCode())
                 .append("Auteur", document.getAuteur())
                 .append("genre", document.getGenre())
                 .append("dateCreation", document.getDateCreation())
                 .append("dateModification", document.getDateModification())
-                .append("version",document.getVersion());
+                .append("version",document.getVersion())
+                .append("content", document.getContent());
 
         documentCollection.insertOne(DocumentDocument);		
 	}
@@ -39,12 +41,13 @@ public class DocumentDaoImpl implements DocumentDao{
 
         if (DocumentDocument != null) {
             return new Documentb(
-            		DocumentDocument.getString("code"),
+            		DocumentDocument.getInteger("code"),
             		DocumentDocument.getString("Auteur"),
             		DocumentDocument.getString("genre"),
             		DocumentDocument.getString("dateCreation"),
             		DocumentDocument.getString("dateModification"),
-            		DocumentDocument.getInteger("version")
+            		DocumentDocument.getInteger("version"),
+            		DocumentDocument.getString("content")
             );
         }
         return null;
@@ -56,12 +59,13 @@ public class DocumentDaoImpl implements DocumentDao{
 
         if (DocumentDocument != null) {
             return new Documentb(
-            		DocumentDocument.getString("code"),
+            		DocumentDocument.getInteger("code"),
             		DocumentDocument.getString("Auteur"),
             		DocumentDocument.getString("genre"),
             		DocumentDocument.getString("dateCreation"),
             		DocumentDocument.getString("dateModification"),
-            		DocumentDocument.getInteger("version")
+            		DocumentDocument.getInteger("version"),
+            		DocumentDocument.getString("content")
             );
         }
         return null;
@@ -73,17 +77,18 @@ public class DocumentDaoImpl implements DocumentDao{
 
         if (DocumentDocument != null) {
             return new Documentb(
-            		DocumentDocument.getString("code"),
+            		DocumentDocument.getInteger("code"),
             		DocumentDocument.getString("Auteur"),
             		DocumentDocument.getString("genre"),
             		DocumentDocument.getString("dateCreation"),
             		DocumentDocument.getString("dateModification"),
-            		DocumentDocument.getInteger("version")
+            		DocumentDocument.getInteger("version"),
+            		DocumentDocument.getString("content")
             );
         }
         return null;
 	}
-	@Override
+	
 	public List<Documentb> selectAllDocuments() {
 		MongoCursor<Document> cursor = documentCollection.find().iterator();
 	    try {
@@ -91,14 +96,15 @@ public class DocumentDaoImpl implements DocumentDao{
 	        while (cursor.hasNext()) {
 	            Document DocumentDocument = cursor.next();
 	            
-	            String code = DocumentDocument.getString("code");
+	            int code = DocumentDocument.getInteger("code");
 	            String Auteur = DocumentDocument.getString("Auteur");
 	            String genre = DocumentDocument.getString("genre");
 	            String dateCreation = DocumentDocument.getString("dateCreation");
 	            String dateModification = DocumentDocument.getString("dateModification");
 	            int version = DocumentDocument.getInteger("version");
+	            String content = DocumentDocument.getString("content");
 	            
-	            l.add(new Documentb(code,Auteur,genre,dateCreation,dateModification,version));
+	            l.add(new Documentb(code,Auteur,genre,dateCreation,dateModification,version,content));
 	        }
 	        return l;}finally {
 	            cursor.close();
@@ -111,7 +117,8 @@ public class DocumentDaoImpl implements DocumentDao{
                 .append("Auteur", document.getAuteur())
                 .append("genre", document.getGenre())
         		.append("dateModification", document.getDateModification())
-                .append("version", document.getVersion()));
+                .append("version", document.getVersion()))
+        		.append("content", document.getContent());
 
         documentCollection.updateOne(query, update);
 		

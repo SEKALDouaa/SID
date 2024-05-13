@@ -2,7 +2,9 @@ package beans;
 
 public class Documentb {
 	private int code;
-	private String Auteur;
+	private String titre;
+	private String departement;
+	private String auteur;
 	private String genre; //livre, article, cours...
 	private String dateCreation;
 	private String dateModification;
@@ -14,10 +16,12 @@ public class Documentb {
 
 	
 
-	public Documentb(int code, String auteur, String genre, String dateCreation, String dateModification,
-			int version, String content) {
+	public Documentb(int code, String titre, String departement, String auteur, String genre, String dateCreation,
+			String dateModification, int version, String content) {
 		this.code = code;
-		Auteur = auteur;
+		this.titre = titre;
+		this.departement = departement;
+		this.auteur = auteur;
 		this.genre = genre;
 		this.dateCreation = dateCreation;
 		this.dateModification = dateModification;
@@ -35,12 +39,32 @@ public class Documentb {
 		this.code = code;
 	}
 
+	public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
+	public String getDepartement() {
+		return departement;
+	}
+
+
+
+	public void setDepartement(String departement) {
+		this.departement = departement;
+	}
+
+
+
 	public String getAuteur() {
-		return Auteur;
+		return auteur;
 	}
 
 	public void setAuteur(String auteur) {
-		Auteur = auteur;
+		this.auteur = auteur;
 	}
 
 	public String getGenre() {
@@ -86,8 +110,9 @@ public class Documentb {
 
 
 	public String toString() {
-		return "Documentb [code=" + code + ", Auteur=" + Auteur + ", genre=" + genre + ", dateCreation=" + dateCreation
-				+ ", dateModification=" + dateModification + ", version=" + version + ", content=" + content + "]";
+		return "Documentb [code=" + code + ", Titre=" + titre + ", Departement=" + departement + ", Auteur=" + auteur
+				+ ", genre=" + genre + ", dateCreation=" + dateCreation + ", dateModification=" + dateModification
+				+ ", version=" + version + ", content=" + content + "]";
 	}
 	
 }

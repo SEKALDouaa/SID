@@ -31,6 +31,22 @@ public class UserDaoImpl implements UserDao {
 
         userCollection.insertOne(userDocument);
     }
+    
+	public User selectUserById(int id) {
+		Document query = new Document("id", id);
+        Document userDocument = userCollection.find(query).first();
+
+        if (userDocument != null) {
+            return new User(
+                    userDocument.getInteger("id"),
+                    userDocument.getString("email"),
+                    userDocument.getString("password"),
+                    userDocument.getString("department"),
+                    userDocument.getString("type")
+            );
+        }
+        return null;
+	}
 
     public User selectUserByEmail(String email) {
         Document query = new Document("email", email);
@@ -98,4 +114,5 @@ public class UserDaoImpl implements UserDao {
 	            cursor.close();
 	        }
 	    }
+
 }

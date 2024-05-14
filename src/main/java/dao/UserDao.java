@@ -6,7 +6,7 @@ import beans.User;
 
 public interface UserDao {
 	public void insertUser(User user);
-	public User selectUserById(int id);//unimplemented
+	public User selectUserById(int id);
 	public User selectUserByEmail(String email);
 	public User selectUserByDepartement(String departement);
 	public List<User> selectAllUsers();

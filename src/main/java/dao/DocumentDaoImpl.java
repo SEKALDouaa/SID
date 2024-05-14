@@ -1,6 +1,8 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.bson.Document;
@@ -33,6 +35,7 @@ public class DocumentDaoImpl implements DocumentDao{
                 .append("dateCreation", document.getDateCreation())
                 .append("dateModification", document.getDateModification())
                 .append("version",document.getVersion())
+                .append("visibilite",document.getVisibilite())
                 .append("content", document.getContent());
 
         documentCollection.insertOne(DocumentDocument);		
@@ -54,6 +57,7 @@ public class DocumentDaoImpl implements DocumentDao{
             		 document.getString("dateCreation"),
             		 document.getString("dateModification"),
             		 document.getInteger("version"),
+            		 document.getString("visibilite"),
             		 document.getString("content")
             );
              l.add(d);
@@ -77,6 +81,7 @@ public class DocumentDaoImpl implements DocumentDao{
            		 document.getString("dateCreation"),
            		 document.getString("dateModification"),
            		 document.getInteger("version"),
+           		 document.getString("visibilite"),
            		 document.getString("content")
            );
             l.add(d);
@@ -100,6 +105,7 @@ public class DocumentDaoImpl implements DocumentDao{
            		 document.getString("dateCreation"),
            		 document.getString("dateModification"),
            		 document.getInteger("version"),
+           		 document.getString("visibilite"),
            		 document.getString("content")
            );
             l.add(d);
@@ -107,49 +113,6 @@ public class DocumentDaoImpl implements DocumentDao{
        return l;
 	}
 	
-	public List<Documentb> selectAllDocuments() {
-		MongoCursor<Document> cursor = documentCollection.find().iterator();
-	    try {
-	    	List<Documentb> l=new ArrayList<>();
-	        while (cursor.hasNext()) {
-	            Document DocumentDocument = cursor.next();
-	            
-	            int code = DocumentDocument.getInteger("code");
-	            String titre = DocumentDocument.getString("titre");
-	            String departement = DocumentDocument.getString("departement");
-	            String auteur = DocumentDocument.getString("auteur");
-	            String genre = DocumentDocument.getString("genre");
-	            String dateCreation = DocumentDocument.getString("dateCreation");
-	            String dateModification = DocumentDocument.getString("dateModification");
-	            int version = DocumentDocument.getInteger("version");
-	            String content = DocumentDocument.getString("content");
-	            
-	            l.add(new Documentb(code,titre,departement,auteur,genre,dateCreation,dateModification,version,content));
-	        }
-	        return l;}finally {
-	            cursor.close();
-	        }
-	}
-
-	public void updateDocument(Documentb document) {
-		Document query = new Document("code", document.getCode());
-        Document update = new Document("$set", new Document()
-                .append("auteur", document.getAuteur())
-                .append("genre", document.getGenre())
-        		.append("dateModification", document.getDateModification())
-                .append("version", document.getVersion()))
-        		.append("content", document.getContent());
-
-        documentCollection.updateOne(query, update);
-		
-	}
-
-	public void deleteDocumentByEmail(String code) {
-		Document query = new Document("code", code);
-        documentCollection.deleteOne(query);
-		
-	}
-
 	public List<Documentb> selectDocumentByTitre(String titre) {
 		List<Documentb> l = new ArrayList<>();
 		
@@ -166,6 +129,7 @@ public class DocumentDaoImpl implements DocumentDao{
            		 document.getString("dateCreation"),
            		 document.getString("dateModification"),
            		 document.getInteger("version"),
+           		 document.getString("visibilite"),
            		 document.getString("content")
            );
             l.add(d);
@@ -189,11 +153,87 @@ public class DocumentDaoImpl implements DocumentDao{
            		 document.getString("dateCreation"),
            		 document.getString("dateModification"),
            		 document.getInteger("version"),
+           		 document.getString("visibilite"),
            		 document.getString("content")
            );
+            Collections.sort(l, Comparator.comparingInt(Documentb::getVersion).reversed());
             l.add(d);
        }
        return l;
+	}
+	
+	public List<Documentb> selectDocumentByVisibilite(String visibilite) {
+List<Documentb> l = new ArrayList<>();
+		
+		Document query = new Document("visibilite", visibilite);
+        FindIterable<Document> DocumentDocument = documentCollection.find(query);
+
+        for (Document document : DocumentDocument) {
+            Documentb d= new Documentb(
+           		 document.getInteger("code"),
+           		 document.getString("titre"),
+           		 document.getString("departement"),
+           		 document.getString("auteur"),
+           		 document.getString("genre"),
+           		 document.getString("dateCreation"),
+           		 document.getString("dateModification"),
+           		 document.getInteger("version"),
+           		 document.getString("visibilite"),
+           		 document.getString("content")
+           );
+            Collections.sort(l, Comparator.comparingInt(Documentb::getVersion).reversed());
+            l.add(d);
+       }
+       return l;
+	}
+	
+	
+	
+	public List<Documentb> selectAllDocuments() {
+		MongoCursor<Document> cursor = documentCollection.find().iterator();
+	    try {
+	    	List<Documentb> l=new ArrayList<>();
+	        while (cursor.hasNext()) {
+	            Document DocumentDocument = cursor.next();
+	            
+	            int code = DocumentDocument.getInteger("code");
+	            String titre = DocumentDocument.getString("titre");
+	            String departement = DocumentDocument.getString("departement");
+	            String auteur = DocumentDocument.getString("auteur");
+	            String genre = DocumentDocument.getString("genre");
+	            String dateCreation = DocumentDocument.getString("dateCreation");
+	            String dateModification = DocumentDocument.getString("dateModification");
+	            int version = DocumentDocument.getInteger("version");
+	            String visibilite = DocumentDocument.getString("visibilite");
+	            String content = DocumentDocument.getString("content");
+	            
+	            l.add(new Documentb(code,titre,departement,auteur,genre,dateCreation,dateModification,version,visibilite,content));
+	        }
+	        return l;}finally {
+	            cursor.close();
+	        }
+	}
+
+	public void updateDocument(Documentb document) {
+		Documentb d=selectDocumentByCode(document.getCode()).get(0);
+		insertDocument(d);
+		Document query = new Document("code", document.getCode());
+        Document update = new Document("$set", new Document()
+                .append("auteur", document.getAuteur())
+                .append("genre", document.getGenre())
+        		.append("dateModification", document.getDateModification())
+                .append("version", document.getVersion()+1)
+                .append("visibilite", document.getVisibilite())
+        		.append("content", document.getContent()));
+
+        documentCollection.updateOne(query, update);
+		
+	}
+
+	public void deleteDocumentByEmail(String code) {
+		Document query = new Document("code", code);
+        documentCollection.deleteOne(query);
+		
 	}
 
 }

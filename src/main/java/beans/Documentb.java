@@ -9,15 +9,14 @@ public class Documentb {
 	private String dateCreation;
 	private String dateModification;
 	private int version;
+	private String visibilite;
 	private String content;
 	
 	public Documentb() {
 	}
 
-	
-
 	public Documentb(int code, String titre, String departement, String auteur, String genre, String dateCreation,
-			String dateModification, int version, String content) {
+			String dateModification, int version, String visibilite, String content) {
 		this.code = code;
 		this.titre = titre;
 		this.departement = departement;
@@ -26,10 +25,9 @@ public class Documentb {
 		this.dateCreation = dateCreation;
 		this.dateModification = dateModification;
 		this.version = version;
+		this.visibilite = visibilite;
 		this.content = content;
 	}
-
-
 
 	public int getCode() {
 		return code;
@@ -98,6 +96,14 @@ public class Documentb {
 	public void setVersion(int version) {
 		this.version = version;
 	}
+	
+	public String getVisibilite() {
+		return visibilite;
+	}
+
+	public void setVisibilite(String visibilite) {
+		this.visibilite = visibilite;
+	}
 
 	public String getContent() {
 		return content;
@@ -107,12 +113,10 @@ public class Documentb {
 		this.content = content;
 	}
 
-
-
 	public String toString() {
-		return "Documentb [code=" + code + ", Titre=" + titre + ", Departement=" + departement + ", Auteur=" + auteur
+		return "Documentb [code=" + code + ", titre=" + titre + ", departement=" + departement + ", auteur=" + auteur
 				+ ", genre=" + genre + ", dateCreation=" + dateCreation + ", dateModification=" + dateModification
-				+ ", version=" + version + ", content=" + content + "]";
+				+ ", version=" + version + ", visibilite=" + visibilite + ", content=" + content + "]";
 	}
-	
+
 }

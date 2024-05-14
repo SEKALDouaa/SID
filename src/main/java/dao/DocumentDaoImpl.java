@@ -255,7 +255,7 @@ public class DocumentDaoImpl implements DocumentDao{
 		
 	}
 
-	public void deleteDocumentByCode(String code) {
+	public void deleteDocumentByCode(int code) {
 		Document query = new Document("code", code);
         documentCollection.deleteOne(query);
 		

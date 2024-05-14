@@ -26,27 +26,31 @@ public class MainTest {
 		
 		//Tester CRUD pour user
 		
-		/*
-		//User Tests
+		
+		/*//User Tests
 		UserDao ud= new UserDaoImpl(MongodbConnection.getMongoClient());
-		User user=new User(0,"test@gmail.com","hbiihjko","test3","test3");
-		ud.insertUser(user);
-		User user2=ud.selectUserByEmail("test@gmail.com");
+		//User user=new User(1,"test@gmail.com","hbiihjko","test","test");
+		//User user3=new User(2,"test@gmail.com","hbiihjko","dept 1","test");
+		//ud.insertUser(user3);
+		//User user2=ud.selectUserByEmail("test@gmail.com");
+		//User user2=ud.selectUserById(1);
+		User user2=ud.selectUserByDepartement("dept 1");
 		System.out.println(user2.toString());
-		ud.updateUser(user);
-		ud.deleteUserByEmail("test@gmail.com");*/
+		//ud.updateUser(user);
+		//ud.deleteUserByEmail("test@gmail.com");*/
 		
 		//Document Tests
 		DocumentDao dd=new DocumentDaoImpl(MongodbConnection.getMongoClient());
-		Documentb d=new Documentb(0,"test1","test1","test1","test1","test1","test1",1,"test1");
-		Documentb d2=new Documentb(0,"test22","test22","test22","test22","test22","test22",1,"test22");
-		Documentb d3=new Documentb(2,"test333","test333","test333","test333","test333","test333",2,"test333");
+		Documentb d=new Documentb(0,"title","department","auteur","genre","tout le monde","test updated");
+		Documentb d2=new Documentb(2,"title2","department","auteur2","genre","departement","test test test");
+		Documentb d3=new Documentb(3,"title3","department2","auteur","genre2","tout le monde","test test");
 		//dd.insertDocument(d3);
-		//dd.updateDocument(d3);
-		List<Documentb> doc=dd.selectDocumentByCode(2);
-		for(Documentb doc1 :doc) {
+		//dd.updateDocument(d);
+		//List<Documentb> doc=dd.selectAllDocuments();
+		dd.deleteDocumentByCode(0);
+		/*for(Documentb doc1 :doc) {
 			System.out.println(doc1.toString());
-		}
+		}*/
 		
     }
 

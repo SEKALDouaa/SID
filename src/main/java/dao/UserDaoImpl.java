@@ -80,7 +80,7 @@ public class UserDaoImpl implements UserDao {
     }
 
 	public User selectUserByDepartement(String departement) {
-		Document query = new Document("departement", departement);
+		Document query = new Document("department", departement);
         Document userDocument = userCollection.find(query).first();
 
         if (userDocument != null) {

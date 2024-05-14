@@ -15,5 +15,5 @@ public interface DocumentDao {
 	public List<Documentb> selectDocumentByDepartement(String departement);
 	public List<Documentb> selectAllDocuments();
 	public void updateDocument(Documentb document);
-	public void deleteDocumentByCode(String code);
+	public void deleteDocumentByCode(int code);
 }

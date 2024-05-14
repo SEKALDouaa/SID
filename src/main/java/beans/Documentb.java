@@ -1,5 +1,7 @@
 package beans;
 
+import java.time.LocalDate;
+
 public class Documentb {
 	private int code;
 	private String titre;
@@ -9,10 +11,24 @@ public class Documentb {
 	private String dateCreation;
 	private String dateModification;
 	private int version;
-	private String visibilite;
+	private String visibilite; //soit tout le monde soit juste le departement du document
 	private String content;
 	
 	public Documentb() {
+	}
+	
+	public Documentb(int code, String titre, String departement, String auteur, String genre,
+			  String visibilite, String content) {
+		this.code = code;
+		this.titre = titre;
+		this.departement = departement;
+		this.auteur = auteur;
+		this.genre = genre;
+		this.dateCreation = ""+LocalDate.now();
+		this.dateModification = "--";
+		this.version = 1;
+		this.visibilite = visibilite;
+		this.content = content;
 	}
 
 	public Documentb(int code, String titre, String departement, String auteur, String genre, String dateCreation,

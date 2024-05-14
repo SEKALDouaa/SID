@@ -12,7 +12,8 @@ public interface DocumentDao {
 	public List<Documentb> selectDocumentByCode(int code);
 	public List<Documentb> selectDocumentByVersion(int version);
 	public List<Documentb> selectDocumentByVisibilite(String visibilite);
+	public List<Documentb> selectDocumentByDepartement(String departement);
 	public List<Documentb> selectAllDocuments();
 	public void updateDocument(Documentb document);
-	public void deleteDocumentByEmail(String email);
+	public void deleteDocumentByCode(String code);
 }

@@ -1,5 +1,6 @@
 package dao;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -32,8 +33,7 @@ public class DocumentDaoImpl implements DocumentDao{
 				.append("departement", document.getDepartement())
                 .append("auteur", document.getAuteur())
                 .append("genre", document.getGenre())
-                .append("dateCreation", document.getDateCreation())
-                .append("dateModification", document.getDateModification())
+                .append("dateCreation", document.getDateCreation()) 
                 .append("version",document.getVersion())
                 .append("visibilite",document.getVisibilite())
                 .append("content", document.getContent());
@@ -163,9 +163,35 @@ public class DocumentDaoImpl implements DocumentDao{
 	}
 	
 	public List<Documentb> selectDocumentByVisibilite(String visibilite) {
-List<Documentb> l = new ArrayList<>();
+		List<Documentb> l = new ArrayList<>();
 		
 		Document query = new Document("visibilite", visibilite);
+        FindIterable<Document> DocumentDocument = documentCollection.find(query);
+
+        for (Document document : DocumentDocument) {
+            Documentb d= new Documentb(
+           		 document.getInteger("code"),
+           		 document.getString("titre"),
+           		 document.getString("departement"),
+           		 document.getString("auteur"),
+           		 document.getString("genre"),
+           		 document.getString("dateCreation"),
+           		 document.getString("dateModification"),
+           		 document.getInteger("version"),
+           		 document.getString("visibilite"),
+           		 document.getString("content")
+           );
+            Collections.sort(l, Comparator.comparingInt(Documentb::getVersion).reversed());
+            l.add(d);
+       }
+       return l;
+	}
+	
+	
+	public List<Documentb> selectDocumentByDepartement(String departement) {
+		List<Documentb> l = new ArrayList<>();
+		
+		Document query = new Document("departement", departement);
         FindIterable<Document> DocumentDocument = documentCollection.find(query);
 
         for (Document document : DocumentDocument) {
@@ -220,8 +246,7 @@ List<Documentb> l = new ArrayList<>();
 		Document query = new Document("code", document.getCode());
         Document update = new Document("$set", new Document()
                 .append("auteur", document.getAuteur())
-                .append("genre", document.getGenre())
-        		.append("dateModification", document.getDateModification())
+        		.append("dateModification", ""+LocalDate.now())
                 .append("version", document.getVersion()+1)
                 .append("visibilite", document.getVisibilite())
         		.append("content", document.getContent()));
@@ -230,10 +255,12 @@ List<Documentb> l = new ArrayList<>();
 		
 	}
 
-	public void deleteDocumentByEmail(String code) {
+	public void deleteDocumentByCode(String code) {
 		Document query = new Document("code", code);
         documentCollection.deleteOne(query);
 		
 	}
+
+
 
 }

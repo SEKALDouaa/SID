@@ -4,11 +4,21 @@ import java.util.List;
 
 import beans.Documentb;
 import beans.User;
+import dao.DocumentDao;
+import dao.DocumentDaoImpl;
+import dao.MongodbConnection;
+import dao.UserDao;
+import dao.UserDaoImpl;
 
 public class facade {
 	private UserBuisness ub;
 	private DocumentBuisness db;
 	
+	public facade(UserBuisness ub, DocumentBuisness db) {
+		this.ub = new UserManager(new UserDaoImpl(MongodbConnection.getMongoClient()));
+		this.db = new DocumentManager(new DocumentDaoImpl(MongodbConnection.getMongoClient()));
+	}
+
 	//Business user methods
 	public void addUser(User user) {
 		ub.addUser(user);

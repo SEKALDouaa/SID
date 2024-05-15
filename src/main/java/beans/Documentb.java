@@ -17,9 +17,9 @@ public class Documentb {
 	public Documentb() {
 	}
 	
-	public Documentb(int code, String titre, String departement, String auteur, String genre,
+	public Documentb(String titre, String departement, String auteur, String genre,
 			  String visibilite, String content) {
-		this.code = code;
+		this.code=-1;
 		this.titre = titre;
 		this.departement = departement;
 		this.auteur = auteur;

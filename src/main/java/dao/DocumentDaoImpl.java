@@ -26,9 +26,33 @@ public class DocumentDaoImpl implements DocumentDao{
         documentCollection = database.getCollection("Document");
     }
 
+    private int selectHigherCode() {
+    	List<Documentb> d = selectAllDocuments();
+    	int n;
+    	if(d==null) {
+    		return -1;
+    	}
+    	else {
+    		n=d.get(0).getCode();
+    		for(Documentb doc : d) {
+    			if(doc.getCode()>=n) {
+    				n=doc.getCode();
+    			}
+    		}
+    	}
+    	return n;
+    }
+    
+    private int chooseCode(Documentb d) {
+    	if(d.getCode()==-1) {
+    		return selectHigherCode()+1;
+    	}
+    	return d.getCode();
+    }
+    
 	public void insertDocument(Documentb document) {
 		Document DocumentDocument = new Document()
-				.append("code",document.getCode())
+				.append("code",chooseCode(document))
 				.append("titre", document.getTitre())
 				.append("departement", document.getDepartement())
                 .append("auteur", document.getAuteur())

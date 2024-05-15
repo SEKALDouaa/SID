@@ -43,21 +43,22 @@ public class MainTest {
 		
 		//Document Tests
 		DocumentDao dd=new DocumentDaoImpl(MongodbConnection.getMongoClient());
-		Documentb d=new Documentb(0,"title","department","auteur","genre","tout le monde","test updated again");
-		Documentb d2=new Documentb(2,"title2","department","auteur2","genre","departement","test test test");
-		Documentb d3=new Documentb(3,"title3","department2","auteur","genre2","tout le monde","test test");
-		//dd.insertDocument(d3);
+		Documentb d=new Documentb("title","department","auteur","genre","tout le monde","test updated again");
+		Documentb d2=new Documentb("title2","department","auteur2","genre","departement","test test test");
+		Documentb d3=new Documentb("title3","department2","auteur","genre2","tout le monde","test test");
+		Documentb d4=new Documentb("title5","department4","auteur4","genre2","tout le monde","test");
+		dd.insertDocument(d4);
 		//dd.updateDocument(d);
 		//List<Documentb> doc=dd.selectAllDocuments();
 		//dd.deleteDocumentByCode(0);
 		/*for(Documentb doc1 :doc) {
 			System.out.println(doc1.toString());
-		}*/
+		}
 		DocumentBuisness db =new DocumentManager(new DocumentDaoImpl(MongodbConnection.getMongoClient()));
 		List<Documentb> doc=db.getDocContainingString("tit");
 		for(Documentb doc1 :doc) {
 			System.out.println(doc1.toString());
-		}
+		}*/
     }
 
 }
